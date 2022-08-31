@@ -1,13 +1,15 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
+const filters = document.querySelector('.filter-todo');
 
 // listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', itemCheck);
+filters.addEventListener('click', filterTodo);
 
 //functions
-function addTodo(event) {
+function addTodo(event) {4
    event.preventDefault();
 
    if (!todoInput.value) return false; // stop blank items
@@ -50,4 +52,10 @@ function itemCheck(e) {
       const todo = item.parentElement;
       todo.classList.toggle('crossoff');
    }
+}
+
+function filterTodo(e) {
+   console.log("in the function");
+   const todos = todoList.childNodes;
+   console.log(todos);
 }
