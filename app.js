@@ -4,7 +4,7 @@ const todoList = document.querySelector('.todo-list');
 
 // listeners
 todoButton.addEventListener('click', addTodo);
-todoList.addEventListener('click', deleteCheck);
+todoList.addEventListener('click', itemCheck);
 
 //functions
 function addTodo(event) {
@@ -35,16 +35,19 @@ function addTodo(event) {
    todoInput.value = '';
 }
 
-function deleteCheck(e) {
+function itemCheck(e) {
    const item = e.target;
 
    if (item.classList[0] === 'delete-btn') { // remove item from list
       const todo = item.parentElement;
-      todo.remove();
+      todo.classList.add('fall');
+      todo.addEventListener('transitionend', function() {
+         todo.remove();
+      });
    }
 
    if (item.classList[0] === 'complete-btn') {
-      const todoClasses = item.parentElement.classList;
-      !Object.values(todoClasses).includes('strike') ? todoClasses.add('strike') : todoClasses.remove('strike');
+      const todo = item.parentElement;
+      todo.classList.toggle('crossoff');
    }
 }
