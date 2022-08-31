@@ -9,8 +9,8 @@ todoList.addEventListener('click', itemCheck);
 filters.addEventListener('click', filterTodo);
 
 //functions
-function addTodo(event) {4
-   event.preventDefault();
+function addTodo(e) {
+   e.preventDefault();
 
    if (!todoInput.value) return false; // stop blank items
 
@@ -54,8 +54,8 @@ function itemCheck(e) {
    }
 }
 
+// for filtering the todo list
 function filterTodo(e) {
-   console.log("in the function");
-   const todos = todoList.childNodes;
-   console.log(todos);
+   const items = todoList.childNodes;
+   console.log(items);
 }

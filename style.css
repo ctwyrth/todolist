@@ -52,8 +52,7 @@ form button {
 }
 
 form button:hover {
-   background-color: #8b3eb5;
-   color: white;
+   color: #451e5c;
 }
 
 .todo-container {
@@ -69,10 +68,10 @@ form button:hover {
 
 .todo {
    margin: 1rem 1rem;
-   /* padding: .25rem .5rem; */
+   padding: .25rem;
    background-color: white;
    color: #54256e;
-   font-size: 1.25rem;
+   font-size: 1.5rem;
    border: none;
    border-radius: 4px;
    display: flex;
@@ -83,7 +82,7 @@ form button:hover {
 }
 
 .todo-item {
-   margin: .25rem 0 .25rem .5rem;
+   margin: 0 0 0 .25rem;
 }
 
 .todo li {
@@ -91,31 +90,31 @@ form button:hover {
 }
 
 .complete-btn, .delete-btn {
-   font-size:  1.375rem;
-   background: #8b3eb5;
-   color: white;
+   font-size:  1.5rem;
+   background: white;
+   color: #8b3eb5;
    border: none;
-   padding: .75rem;
+   padding: .25rem;
    cursor: pointer;
 }
 
 .delete-btn {
-   border-top-right-radius: 4px;
-   border-bottom-right-radius: 4px;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
 }
 
 .delete-btn:hover {
-   background: #632c81;
+   color: #632c81;
 }
 
 .complete-btn {
-   background: rgb(80, 221, 80);
-   
-
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   color: rgb(80, 221, 80);
 }
 
 .complete-btn:hover {
-   background: rgb(48, 135, 48);
+   color: rgb(48, 135, 48);
 }
 
 .fa-square-check, .fa-square-minus {
@@ -125,6 +124,7 @@ form button:hover {
 .crossoff {
    text-decoration: line-through;
    opacity: 0.5;
+   box-shadow: 2px 2px 4px rgba(0,0,0,.5);
 }
 
 .fall {
@@ -138,36 +138,31 @@ select {
    appearance: none;
    outline: none;
    border: none;
+   color: #54256e;
+   width: 5rem;
+   font-size: .75rem;
+   padding: .5rem;
+   cursor: pointer;
 }
 
 .select {
-   margin: 1rem;
+   margin-left: 1.5rem;
    position: relative;
    overflow: hidden;
-}
-
-select {
-   color: #54256e;
-   width: 6rem;
-   font-size: 1rem;
-   padding: .5rem;
-   cursor: pointer;
 }
 
 .select::after {
    content: "\25BC";
    position: absolute;
-   background: #8b3eb5;
-   font-size: 1rem;
+   color: #8b3eb5;
+   font-size: .75rem;
    top: 0;
    right: 0;
-   padding: .35rem .5rem;
+   padding:.5rem;
    pointer-events: none;
-   border-top-right-radius: 5px;
-   border-bottom-right-radius: 5px;
-   overflow: hidden;
+
 }
 
 .select:hover::after {
-   background: #54256e;
+   color: #451e5c;
 }
