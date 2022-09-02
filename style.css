@@ -140,9 +140,10 @@ select {
    border: none;
    color: #54256e;
    width: 5rem;
-   font-size: .75rem;
+   font-size: 1rem;
    padding: .5rem;
    cursor: pointer;
+   border-radius: 5px;
 }
 
 .select {
@@ -155,12 +156,12 @@ select {
    content: "\25BC";
    position: absolute;
    color: #8b3eb5;
-   font-size: .75rem;
+   font-size: 1rem;
    top: 0;
    right: 0;
-   padding:.5rem;
+   padding:.4rem;
    pointer-events: none;
-
+   transition: all 0.3s ease;
 }
 
 .select:hover::after {
